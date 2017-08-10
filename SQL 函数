@@ -1,0 +1,34 @@
+functions
+    函数的基本类型是：
+        Aggregate 函数
+        Scalar 函数
+        
+avg()
+count()
+first()
+last()
+max()
+min()
+sum()
+Group By
+Having   在 SQL 中增加 HAVING 子句原因是，WHERE 关键字无法与合计函数一起使用。
+    SELECT Customer,SUM(OrderPrice) FROM Orders
+    GROUP BY Customer
+    HAVING SUM(OrderPrice)<2000
+ucase()
+lcase()
+mid()
+        SELECT MID(column_name,start[,length]) FROM table_name
+len()
+round()
+        用于把数值字段舍入为指定的小数位数。
+        SELECT ROUND(column_name,decimals) FROM table_name
+        SELECT ProductName, ROUND(UnitPrice,0) as UnitPrice FROM Products
+now()
+        NOW() 函数
+        NOW 函数返回当前的日期和时间。
+        提示：如果您在使用 Sql Server 数据库，请使用 getdate() 函数来获得当前的日期时间。
+        SQL NOW() 语法
+        SELECT NOW() FROM table_name
+format()
+    SELECT FORMAT(column_name,format) FROM table_name
